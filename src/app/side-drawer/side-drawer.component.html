@@ -1,0 +1,66 @@
+<div class="shadow-xl/40 transition ease-in-out bg-white" [ngClass]="{'toggle-bar': visible}">
+    <div *ngIf="!visible" class="h-screen w-20 hidden md:flex flex-col">
+        <div class="flex justify-center mt-4 mb-8">
+            <button (click)="onMenuClick()" class="pi pi-bars text-black text-2xl cursor-pointer"></button>
+        </div>
+        <div class="flex flex-col flex-1 items-center justify-center space-y-4">
+            <a
+                class="pi pi-chart-bar text-2xl text-gray-700 rounded-lg transition duration-200 hover:text-white hover:scale-125 hover:bg-blue-600 p-3"></a>
+            <a
+                class="pi pi-users text-2xl text-gray-700 rounded-lg transition duration-200 hover:text-white hover:scale-125 hover:bg-blue-600 p-3"></a>
+            <a
+                class="pi pi-chart-line text-2xl text-gray-700 rounded-lg transition duration-200 hover:text-white hover:scale-125 hover:bg-blue-600 p-3"></a>
+            <a
+                class="pi pi-folder text-2xl text-gray-700 rounded-lg transition duration-200 hover:text-white hover:scale-125 hover:bg-blue-600 p-3"></a>
+            <a
+                class="pi pi-calendar text-2xl text-gray-700 rounded-lg transition duration-200 hover:text-white hover:scale-125 hover:bg-blue-600 p-3"></a>
+            <a
+                class="pi pi-list text-2xl text-gray-700 rounded-lg transition duration-200 hover:text-white hover:scale-125 hover:bg-blue-600 p-3"></a>
+            <a
+                class="pi pi-cog text-2xl text-gray-700 rounded-lg transition duration-200 hover:text-white hover:scale-125 hover:bg-blue-600 p-3"></a>
+        </div>
+        <div class="flex justify-center mb-6">
+            <button (click)="logout()"
+                class="pi pi-sign-out text-2xl text-gray-700 rounded-lg transition duration-200 hover:text-white hover:scale-125 hover:bg-red-600 p-3"></button>
+        </div>
+    </div>
+
+    <div *ngIf="visible" class="h-screen px-4 w-50 hidden md:flex flex-col">
+        <div class="flex justify-between mt-4 mb-8">
+            <img src="https://amplelogic.com/wp-content/uploads/2023/03/10018-4-300x56-1.jpg" alt="" height="40"
+                width="100" />
+            <button (click)="onMenuClick()" class="pi pi-arrow-circle-left text-black text-2xl cursor-pointer"></button>
+        </div>
+        <div class="flex flex-col flex-1 items-center justify-center space-y-4">
+            <a
+                class="flex w-full items-center justify-start text-gray-700 rounded-lg transition duration-200 hover:text-white hover:scale-105 hover:shadow-xl hover:bg-blue-600 p-3">
+                <span class="pi pi-chart-bar text-2xl mr-3"></span> Dashboard
+            </a>
+            <a
+                class="flex w-full items-center justify-start text-gray-700 rounded-lg transition duration-200 hover:text-white hover:scale-105 hover:shadow-xl hover:bg-blue-600 p-3">
+                <span class="pi pi-users text-2xl mr-3"></span> People
+            </a>
+            <a
+                class="flex w-full items-center justify-start text-gray-700 rounded-lg transition duration-200 hover:text-white hover:scale-105 hover:shadow-xl hover:bg-blue-600 p-3">
+                <span class="pi pi-chart-line text-2xl mr-3"></span> Performance
+            </a>
+            <a
+                class="flex w-full items-center justify-start text-gray-700 rounded-lg transition duration-200 hover:text-white hover:scale-105 hover:shadow-xl hover:bg-blue-600 p-3">
+                <span class="pi pi-folder text-2xl mr-3"></span> Documents
+            </a>
+            <a
+                class="flex w-full items-center justify-start text-gray-700 rounded-lg transition duration-200 hover:text-white hover:scale-105 hover:shadow-xl hover:bg-blue-600 p-3">
+                <span class="pi pi-calendar text-2xl mr-3"></span> Calendar
+            </a>
+            <a
+                class="flex w-full items-center justify-start text-gray-700 rounded-lg transition duration-200 hover:text-white hover:scale-105 hover:shadow-xl hover:bg-blue-600 p-3">
+                <span class="pi pi-cog text-2xl mr-3"></span> Settings </a>
+        </div>
+        <div class="flex justify-center mb-6">
+            <button (click)="logout()"
+                class="flex w-full items-center justify-start text-gray-700 rounded-lg transition duration-200 hover:text-white hover:scale-105 hover:bg-red-600 p-3"><span
+                    class="pi pi-sign-out text-2xl mr-3">
+                </span>Logout</button>
+        </div>
+    </div>
+</div>
