@@ -17,32 +17,33 @@ export class NavbarComponent {
       {
         label: 'Home',
         icon: 'pi pi-home',
+        routerLink: ['/'],
       },
       {
-        label: 'Projects',
-        icon: 'pi pi-search',
-        badge: '3',
-        items: [
-          {
-            label: 'Core',
-            icon: 'pi pi-bolt',
-            shortcut: '⌘+S',
-          },
-          {
-            label: 'Blocks',
-            icon: 'pi pi-server',
-            shortcut: '⌘+B',
-          },
-          {
-            separator: true,
-          },
-          {
-            label: 'UI Kit',
-            icon: 'pi pi-pencil',
-            shortcut: '⌘+U',
-          },
-        ],
+        label: 'About',
+        icon: 'pi pi-info',
+        routerLink: ['/about'],
       },
+      {
+        label: 'Contact',
+        icon: 'pi pi-envelope',
+        routerLink: ['/contact'],
+      },
+      {
+        label: 'Help',
+        icon: 'pi pi-question',
+        routerLink: ['/help'],
+      },
+      {
+        label: 'Settings',
+        icon: 'pi pi-cog',
+        routerLink: ['/settings'],
+      },
+      {
+        label: 'Logout',
+        icon: 'pi pi-sign-out',
+        routerLink: ['/logout'],
+      }
     ];
   }
 }

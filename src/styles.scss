@@ -3,6 +3,39 @@
 @tailwind components;
 @tailwind utilities;
 
+
+// custom-nora.scss
+
+// Override primary color variable here:
+$primaryColor: #1d4ed8 !default;
+$primaryColorHover: #2563eb !default;
+$primaryColorText: #fff !default;
+
 body {
-  background-color: whitesmoke;
+  background-color: #e8ebf1;
+}
+
+/* src/styles.css */
+.p-menu {
+  background-color: white !important;
+}
+
+.p-menu .p-menu-item-link:hover{
+  background-color: gray !important;
+}
+
+.p-menu span {
+  color: black !important;
+}
+
+.p-menu-item-link {
+  color: #edf2f7 !important;
+}
+
+.p-chart canvas {
+  height: 300px !important;
+}
+
+.line-chart canvas {
+  height: 300px !important;
 }

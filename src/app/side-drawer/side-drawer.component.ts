@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { PrimeModule } from '../prime/prime.module';
 import { Drawer } from 'primeng/drawer';
 
@@ -12,6 +12,7 @@ import { Drawer } from 'primeng/drawer';
 export class SideDrawerComponent {
   visible: boolean = false;
   @ViewChild('drawerRef') drawerRef!: Drawer;
+  @Output() visibleChange = new EventEmitter<boolean>();
 
   closeCallback(e: Event): void {
     this.drawerRef.close(e);
@@ -19,6 +20,7 @@ export class SideDrawerComponent {
 
   onMenuClick(): void {
     this.visible = !this.visible;
+    this.visibleChange.emit(this.visible);
   }
 
   logout(): void {

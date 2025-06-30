@@ -1,7 +1,22 @@
 <main class="main">
-  <div class="content flex flex-direction-row h-100">
-    <app-side-drawer></app-side-drawer>
-    <app-navbar class="w-full"></app-navbar>
+  <div class="content h-100">
+    <div class="flex">
+      <app-side-drawer (visibleChange)="onDrawerVisibleChange($event)" class="z-[999]"></app-side-drawer>
+      <div *ngIf="drawerVisible" class="ml-[9rem]"></div>
+      <div class="flex flex-col w-[95%] h-screen overflow-y-auto" [ngClass]="drawerVisible ? 'ml-10' : ''">
+        <app-navbar class="mx-auto fixed z-10 h-20 w-[95%]"
+          [ngStyle]="drawerVisible ? { width: '90%' } : {}">></app-navbar>
+        <app-emp-testimonial class="mx-4 mt-[7.5rem]"></app-emp-testimonial>
+        <footer class="bg-white text-black text-center mt-4 p-4">
+          <p>&copy; 2025 My Company. All rights reserved.</p>
+        </footer>
+      </div>
+    </div>
   </div>
 </main>
-<router-outlet />
+<!-- <router-outlet /> -->
+
+
+<!-- <div className="grid grid-cols-5 grid-rows-5 gap-4">
+  <div className="col-span-4 row-span-4 col-start-2 row-start-2">3</div>
+</div> -->
